@@ -7,9 +7,9 @@ This app will change your typed text "Windows" to "Linux" (Just what Grussmann l
 1. Download or copy `main.c` to your computer and save it somewhere
 
 2. Run this command in windows powershell inside the folder with the file (make sure you have gcc installed) <br>
-`gcc main.c -o linux.exe -s`<br>
+`gcc main.c -o linux.exe -s -O3`<br>
 or use <br>
-`gcc main.c -o linux.exe -s -mwindows`<br>
+`gcc main.c -o linux.exe -s -O3 -mwindows`<br>
 for hidden window (you probably want the second option).
 
 3. Double click the compiled file (linux.exe) 
