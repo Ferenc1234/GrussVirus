@@ -49,7 +49,8 @@ LRESULT CALLBACK low_level_keyboard_proc(int n_code, WPARAM w_param, LPARAM l_pa
                 history[6] = keyboard->vkCode;
 
                 if (history[0] == 'W' && history[1] == 'I' && history[2] == 'N' && history[3] == 'D' && history[4] == 'O' && history[5] == 'W' && history[6] == 'S') {
-                    simulate_key_press(VK_BACK, 1); //press the key backspace and control
+                    simulate_key_press(VK_BACK, 0); //press backspace once to delete text prediction (on google etc.)
+                    simulate_key_press(VK_BACK, 1); //press backspace and control to remove the rest of the word
                     simulate_key_press('L', 0);
                     simulate_key_press('I', 0);
                     simulate_key_press('N', 0);
